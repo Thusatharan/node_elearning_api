@@ -8,12 +8,17 @@ const StudentSchema = new Schema({
     },
     password: {
         type: String,
+        required: [true, 'Password field is required']
+    },
+    age: {
+        type: String,
         required: [true, 'Age field is required']
     },
-    available: {
-        type: Boolean,
-        default: false
-    }
+    grade: {
+        type: String,
+        required: [true, 'Grade field is required']
+    },
+
 });
 
 const Student = mongoose.model('student', StudentSchema);
